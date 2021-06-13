@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.*;
 import net.diegoqueres.crud.entity.Produto;
 import org.modelmapper.ModelMapper;
+import org.springframework.hateoas.RepresentationModel;
 
 import java.io.Serializable;
 
@@ -14,8 +15,8 @@ import java.io.Serializable;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode
-public class ProdutoDTO implements Serializable {
+@EqualsAndHashCode(callSuper = false)
+public class ProdutoDTO extends RepresentationModel<ProdutoDTO> implements Serializable {
     private static final long serialVersionUID = -6971061102210858989L;
 
     @JsonProperty("id")

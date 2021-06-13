@@ -3,7 +3,7 @@ package net.diegoqueres.crud.services;
 import net.diegoqueres.crud.data.dto.ProdutoDTO;
 import net.diegoqueres.crud.entity.Produto;
 import net.diegoqueres.crud.exception.ResourceNotFoundException;
-import net.diegoqueres.crud.repository.ProdutoRepository;
+import net.diegoqueres.crud.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -13,7 +13,6 @@ import java.util.Optional;
 
 @Service
 public class ProdutoService {
-
     private final ProdutoRepository produtoRepository;
 
     @Autowired
