@@ -19,3 +19,8 @@ spring:
     url: jdbc:mysql://localhost:3306/crud?allowPublicKeyRetrieval=true&useSSL=false&sslMode=DISABLED&serverTimezone=UTC
     username: microservices
     password: iDW*BQJBV%4&
+
+crud:
+  rabbitmq:
+    exchange: crud.exchange
+    routingkey: crud.produto.routingkey
