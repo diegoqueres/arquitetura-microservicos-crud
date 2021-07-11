@@ -25,8 +25,9 @@ public class ProdutoService {
 
     public ProdutoDTO create(ProdutoDTO produtoDTO) {
         Produto produto = produtoRepository.save(Produto.create(produtoDTO));
-        produtoSendMessage.sendMessage(produtoDTO);
-        return ProdutoDTO.create(produto);
+        ProdutoDTO produtoDTORetorno = ProdutoDTO.create(produto);
+        produtoSendMessage.sendMessage(produtoDTORetorno);
+        return produtoDTORetorno;
     }
 
     public Page<ProdutoDTO> findAll(Pageable pageable) {
